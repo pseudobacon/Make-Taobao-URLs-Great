@@ -1,0 +1,70 @@
+{
+    "createdBy": "Redirector v3.5.2",
+    "createdAt": "2020-01-23T04:05:22.842Z",
+    "redirects": [
+        {
+            "description": "Taobao",
+            "exampleUrl": "https://item.taobao.com/item.htm?spm=2013.1.20141002.9.51844d4d7Umxqs&scm=1007.10009.70205.100200300000001&id=573258259013&pvid=74333ba0-07e4-49be-8fd0-37481c43c6d7&spm=2013.1.20141002.9.51844d4d7Umxqs&scm=1007.10009.70205.100200300000001&pvid=74333ba0-07e4-49be-8fd0-37481c43c6d7",
+            "exampleResult": "https://item.taobao.com/item.htm?id=573258259013",
+            "error": null,
+            "includePattern": "https:\\/\\/(item.taobao|detail.tmall).com\\/.*&id=(\\d+).*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://$1.com/item.htm?id=$2",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Taobao/Tmall Shop",
+            "exampleUrl": "https://shop103790143.taobao.com/shop/view_shop.htm?spm=a1z09.2.0.0.17e12e8d5dyPsp&user_number_id=910530420",
+            "exampleResult": "https://shop103790143.taobao.com",
+            "error": null,
+            "includePattern": "https:\\/\\/([a-zA-Z0-9]*).(taobao|tmall).com\\/shop\\/view_shop.*",
+            "excludePattern": "https:\\/\\/store.taobao.com\\/.*",
+            "patternDesc": "",
+            "redirectUrl": "https://$1.$2.com",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Taobao/Tmall Purchase History",
+            "exampleUrl": "https://tradearchive.taobao.com/trade/detail/trade_item_detail.htm?spm=a1z09.2.0.0.17e12e8d5dyPsp&bizOrderId=379501346189334540",
+            "exampleResult": "https://tradearchive.taobao.com/trade/detail/trade_item_detail.htm?&bizOrderId=379501346189334540",
+            "error": null,
+            "includePattern": "https:\\/\\/(tradearchive|trade).(taobao.com\\/trade|tmall.com).*(trade)?.*(trade_item_detail|orderDetail|trade_snap).*(bizOrderId|trade_id)=(\\d+)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://$1.$2/detail/$4.htm?&$5=$6",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Tmall with SKU",
+            "exampleUrl": "https://detail.tmall.com/item.htm?spm=a220o.1000855.w5003-17506842944.3.1a6b2652xVgwK8&id=548489375550&scene=taobao_shop&skuId=3492674559661",
+            "exampleResult": "https://detail.tmall.com/item.htm?id=548489375550&skuId=3492674559661",
+            "error": null,
+            "includePattern": "https:\\/\\/detail.tmall.com\\/item.htm\\?spm=[.a-zA-Z0-9-]*&id=(\\d+)&scene=taobao_shop&skuId=(\\d+)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://detail.tmall.com/item.htm?id=$1&skuId=$2",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        }
+    ]
+}
